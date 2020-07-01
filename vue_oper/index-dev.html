@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="/static/images/favicon.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/x-icon"/>
+    <meta charset="utf-8">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/css/bootstrap.min.css"
+          rel="stylesheet">
+    <!-- kendo ui css -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.common.min.css"
+          rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/styles/kendo.default.min.css"
+          rel="stylesheet">
+    <!-- font-awesome -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/assets/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <!--蓝鲸提供的公用样式库 -->
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk.css" rel="stylesheet">
+    <link href="https://magicbox.bk.tencent.com/static_api/v3/bk/css/bk_pack.css" rel="stylesheet">
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/js/jquery-1.10.2.min.js"></script>
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <!-- 包括所有kendoui的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/kendoui-2015.2.624/js/kendo.all.min.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/assets/echarts-2.0/echarts-all.js"></script>
+    <script src="https://magicbox.bk.tencent.com/static_api/v3/bk/js/bk.js"></script>
+    <!-- 数据埋点统计 -->
+    <script src="http://magicbox.bk.tencent.com/static_api/analysis.js"></script>
+    <title> index </title>
+</head>
+<body>
+<div id="app"></div>
+<script src="{{ SITE_URL }}static/lib.bundle.js"></script>
+<script>
+    window.PROJECT_CONFIG = (function () {
+        const SITE_URL = '/'
+        const BK_STATIC_URL = '/'
+        const REMOTE_STATIC_URL = ''
+
+        return {
+            SITE_URL: SITE_URL,
+            BK_STATIC_URL: BK_STATIC_URL,
+            REMOTE_STATIC_URL: REMOTE_STATIC_URL
+        }
+    })()
+
+    window.onload = function () {
+        let ta = document.createElement('script')
+        ta.src = '//tajs.qq.com/stats?sId=64878578'
+        ta.defer = 'defer'
+        let s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(ta, s)
+    }
+</script>
+</body>
+</html>
